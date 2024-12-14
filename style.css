@@ -1,0 +1,78 @@
+body {
+  font-family: 'Orbitron', sans-serif;
+  color: #d4d4d4;
+  margin: 0;
+  padding: 0;
+  background: #1b1b1b url('assets/images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+  color: #ff0000;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #d4d4d4;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  color: #ff0000;
+}
+
+section {
+  padding: 100px 80px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#message-board {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+#map {
+  height: 300px;
+  background: #222;
+  border: 2px solid #444;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+}

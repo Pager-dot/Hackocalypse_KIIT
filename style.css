@@ -1,78 +1,108 @@
+/* General Styles */
 body {
-  font-family: 'Orbitron', sans-serif;
-  color: #d4d4d4;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #1b1b1b url('assets/images/background.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
-header {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 10px 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 3em;
-  margin: 0;
-  color: #ff0000;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  background-color: #f4f4f9;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: #d4d4d4;
-  text-decoration: none;
-}
-
-.hero {
+h1 {
   text-align: center;
-  padding: 100px 20px;
-  background: rgba(0, 0, 0, 0.7);
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-transform: capitalize;
 }
-
-.hero h2 {
-  font-size: 2.5em;
-  color: #ff0000;
-}
-
-section {
-  padding: 100px 80px;
+title{
   text-align: center;
+
 }
 
-section h2 {
-  font-size: 2em;
+.form-group {
   margin-bottom: 20px;
 }
 
-#message-board {
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 600px;
-  margin: auto;
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
 }
 
-#map {
-  height: 300px;
-  background: #222;
-  border: 2px solid #444;
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 5px;
+  outline: none;
 }
 
-footer {
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+}
+
+button {
+  width: 100%;
+  padding: 14px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#toggle-text {
   text-align: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.8);
+  margin-top: 20px;
+}
+
+#toggle-link {
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#toggle-link:hover {
+  color: #0056b3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  #root {
+    width: 100%;
+    padding: 15px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  button {
+    padding: 12px 0;
+  }
 }

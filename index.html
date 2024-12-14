@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="h1">Register and Login</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* General Styles */
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f9;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+      }
+
+      #root {
+          width: 100%;
+          max-width: 480px;
+          padding: 20px;
+          background-color: white;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          border-radius: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+      }
+
+      h1 {
+          text-align: center;
+          color: #333;
+          margin-bottom: 20px;
+          font-size: 30px;
+          text-transform: capitalize;
+      }
+
+      .form-group {
+          margin-bottom: 20px;
+      }
+
+      label {
+          display: block;
+          margin-bottom: 5px;
+          font-size: 14px;
+          color: #333;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+          width: 100%;
+          padding: 12px 15px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          font-size: 16px;
+          margin-top: 5px;
+          outline: none;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+          border-color: #ff9800;
+      }
+
+      button {
+          width: 100%;
+          padding: 14px 0;
+          background-color: #ff9800;
+          color: white;
+          border: none;
+          border-radius: 30px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+          background-color: #e68900;
+      }
+
+      #toggle-text {
+          text-align: center;
+          margin-top: 20px;
+      }
+
+      #toggle-link {
+          color: #ff9800;
+          font-weight: bold;
+          cursor: pointer;
+          text-decoration: underline;
+      }
+
+      #toggle-link:hover {
+          color: #e68900;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 600px) {
+          #root {
+              width: 100%;
+              padding: 15px;
+          }
+          h1 {
+              font-size: 26px;
+          }
+          button {
+              padding: 12px 0;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="container">
+        <div id="form-container">
+          <h1 id="form-title">Register</h1>
+          <form id="auth-form">
+            <div class="form-group">
+              <label for="username">Survivor</label>
+              <input type="text" id="username" placeholder="Enter Survivor name" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                required
+              />
+            </div>
+            <button type="submit" id="action-btn">Register</button>
+          </form>
+          <p id="toggle-text">
+            Already have an account? <span id="toggle-link">Login</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

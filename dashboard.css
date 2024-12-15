@@ -1,97 +1,106 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', monospace;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #1c1c1c;
+    color: #e1e1e1;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-image: radial-gradient(circle, rgba(255,0,0,0.3), rgba(0,0,0,1));
+    background-attachment: fixed;
 }
 
 .container {
     width: 100%;
     max-width: 800px;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
+    background-color: rgba(50, 50, 50, 0.8);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
 }
 
 h1, h2 {
-    color: #333;
+    color: #f22a2a;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px rgba(255,0,0,0.5);
 }
 
-#broadcast-block {
-    margin-top: 20px;
-}
-
+/* Textarea */
 textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #3c3c3c;
     border-radius: 6px;
     font-size: 16px;
     margin-top: 5px;
     outline: none;
+    background: rgba(255, 0, 0, 0.2);
+    color: #fff;
+    resize: none;
 }
 
 textarea:focus {
-    border-color: #ff9800;
+    border-color: #ff0000;
+    box-shadow: 0 0 10px #ff0000;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #ff9800;
+    background-color: rgba(255, 0, 0, 0.8);
     color: white;
     border: none;
     border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s;
     margin-right: 10px;
 }
 
 button:hover {
-    background-color: #e68900;
-}
-
-#tabs {
-    margin-top: 20px;
+    background-color: #ff4c4c;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
 }
 
 #tabs a {
-    color: #ff9800;
+    color: #ff0;
     font-weight: bold;
     text-decoration: none;
     margin-right: 20px;
+    text-transform: uppercase;
 }
 
 #tabs a:hover {
-    color: #e68900;
-}
-
-.form-group {
-    margin-bottom: 20px;
+    color: #ff4500;
+    text-shadow: 0 0 10px #ff4500;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
     font-size: 14px;
-    color: #333;
+    color: #f2f2f2;
+    text-transform: uppercase;
 }
 
 input[type="file"] {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 6px;
     font-size: 16px;
     margin-top: 5px;
     outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #f2f2f2;
 }
 
 input[type="file"]:focus {
-    border-color: #ff9800;
+    border-color: #ff0;
+    box-shadow: 0 0 10px #ff0;
 }

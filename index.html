@@ -3,36 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="h1">Register and Login</title>
+    <title>Register and Login</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* General Styles */
       body {
-          font-family: Arial, sans-serif;
+          font-family: 'Courier New', Courier, monospace;
           margin: 0;
           padding: 0;
-          background-color: #f4f4f9;
+          background: url('background.jpg') no-repeat center center fixed;
+          background-size: cover;
+          color: #0aff0a;
           display: flex;
           justify-content: center;
           align-items: center;
           height: 100vh;
       }
 
-      #root {
+      .container {
           width: 100%;
           max-width: 480px;
           padding: 20px;
-          background-color: white;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          background-color: rgba(30, 30, 30, 0.8);
+          box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
           border-radius: 12px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+          border: 1px solid #0aff0a;
       }
 
       h1 {
+          font-family: 'Orbitron', sans-serif;
           text-align: center;
-          color: #333;
+          color: #0aff0a;
+          text-shadow: 0 0 10px #0aff0a, 0 0 20px #007f00;
           margin-bottom: 20px;
           font-size: 30px;
           text-transform: capitalize;
@@ -40,45 +41,59 @@
 
       .form-group {
           margin-bottom: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
       }
 
       label {
           display: block;
           margin-bottom: 5px;
           font-size: 14px;
-          color: #333;
+          color: #0aff0a;
+          text-align: left;
+          width: 100%;
       }
 
       input[type="text"],
       input[type="password"] {
           width: 100%;
           padding: 12px 15px;
-          border: 1px solid #ccc;
+          border: 1px solid #0aff0a;
           border-radius: 6px;
           font-size: 16px;
           margin-top: 5px;
           outline: none;
+          background-color: #0d0d0d;
+          color: #0aff0a;
       }
 
       input[type="text"]:focus,
       input[type="password"]:focus {
-          border-color: #ff9800;
+          border-color: #0affaa;
+          box-shadow: 0 0 10px #0aff0a;
       }
 
       button {
           width: 100%;
           padding: 14px 0;
-          background-color: #ff9800;
-          color: white;
-          border: none;
+          background: linear-gradient(145deg, #0aff0a, #005f00);
+          color: black;
+          font-weight: bold;
+          border: 1px solid #007f00;
           border-radius: 30px;
           font-size: 16px;
           cursor: pointer;
-          transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease, transform 0.2s;
+          font-family: 'Orbitron', sans-serif;
       }
 
       button:hover {
-          background-color: #e68900;
+          background: #005f00;
+          color: #0aff0a;
+          text-shadow: 0 0 10px #0aff0a;
+          transform: scale(1.1);
+          box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
       }
 
       #toggle-text {
@@ -87,19 +102,20 @@
       }
 
       #toggle-link {
-          color: #ff9800;
+          color: #0aff0a;
           font-weight: bold;
           cursor: pointer;
           text-decoration: underline;
       }
 
       #toggle-link:hover {
-          color: #e68900;
+          color: #00ff00;
+          text-shadow: 0 0 10px #00ff00;
       }
 
       /* Mobile Responsiveness */
       @media (max-width: 600px) {
-          #root {
+          .container {
               width: 100%;
               padding: 15px;
           }
@@ -110,34 +126,31 @@
               padding: 12px 0;
           }
       }
-    </style>
+  </style>
   </head>
   <body>
-    <div id="root">
-      <div class="container">
-        <div id="form-container">
-          <h1 id="form-title">Register</h1>
-          <form id="auth-form">
-            <div class="form-group">
-              <label for="username">Survivor</label>
-              <input type="text" id="username" placeholder="Enter Survivor name" required />
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                placeholder="Enter password"
-                required
-              />
-            </div>
-            <button type="submit" id="action-btn">Register</button>
-          </form>
-          <p id="toggle-text">
-            Already have an account? <span id="toggle-link">Login</span>
-          </p>
+    <div class="container">
+      <h1 id="form-title">Register</h1>
+      <form id="auth-form">
+        <div class="form-group">
+          <label for="username">Survivor</label>
+          <input type="text" id="username" placeholder="Enter Survivor name" required />
         </div>
-      </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter password"
+            required
+          />
+        </div>
+        <button type="submit" id="action-btn">Register</button>
+      </form>
+      <p id="toggle-text">
+        Already have an account? <span id="toggle-link">Login</span>
+      </p>
+      <p id="message"></p>
     </div>
     <script src="script.js"></script>
   </body>
